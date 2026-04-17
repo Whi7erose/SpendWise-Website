@@ -1,6 +1,6 @@
 # 💸 SpendWise
 
-# Google Sites Link-  https://sites.google.com/iit.ac.lk/spendwise/h
+# Google Sites Link-  https://sites.google.com/iit.ac.lk/spendwise/home
 
 > A prototype concept webpage for a personal budgeting app idea  built just for fun as a pet project.
 
