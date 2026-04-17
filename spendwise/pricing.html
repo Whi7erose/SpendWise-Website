@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpendWise Pricing — Free Budgeting App Sri Lanka | LKR 1,500/mo Premium Plan</title>
+<meta name="description" content="SpendWise pricing: free budgeting app tier forever, or premium at LKR 1,500/month with real-time pre-purchase spending alerts, AI financial dashboard, SME expense reports, and tax reimbursement management. First 3 months completely free — no credit card required.">
+<meta name="keywords" content="free budgeting app Sri Lanka, budgeting app price Sri Lanka, LKR expense tracker pricing, automated expense tracker free trial, SpendWise premium plan, SME expense tracker pricing Sri Lanka, free financial tracking app Sri Lanka, no credit card budgeting app, personal finance app LKR 1500">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/footer.css">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%2300e87a'/><text y='.9em' font-size='60' x='18'>💰</text></svg>">
+</head>
+<body style="padding-top:64px;">
+
+  <!-- ══ NAVBAR ══ -->
+  <nav class="sw-nav" id="sw-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/images/logo.png" alt="SpendWise logo">
+        <span>SpendWise</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html"          class="nav-link">Home</a>
+        <a href="products.html"       class="nav-link">Products</a>
+        <a href="features.html"       class="nav-link">Features</a>
+        <a href="how-it-works.html"   class="nav-link">How It Works</a>
+        <a href="pricing.html"        class="nav-link">Pricing</a>
+        <a href="faq.html"            class="nav-link">FAQ</a>
+        <a href="contact.html"        class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="pricing.html" class="btn-nav-cta">Start Free Trial</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#050e1f;--navy2:#0b1a31;--navy3:#112040;--green:#00e87a;--green2:#00c465;--blue:#1a8cff;--gold:#ffcb47;--purple:#a855f7;--text:#e8f0fe;--text2:#8ca5c8;--text3:#5a7a9e;--border:rgba(255,255,255,0.07);--card:rgba(255,255,255,0.04);--radius:16px;--font-sans:"Google Sans Flex",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--text);font-family:var(--font-sans);-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.6;padding:60px 20px;overflow-x:hidden;}
+.section{max-width:1200px;margin:0 auto;padding-bottom:80px;}
+.section-badge{display:inline-block;background:rgba(26,140,255,0.1);border:1px solid rgba(26,140,255,0.2);color:var(--blue);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:20px;}
+.section-title{font-size:clamp(32px,4vw,48px);font-weight:800;color:#fff;line-height:1.1;letter-spacing:-1.5px;margin-bottom:16px;}
+.section-title em{font-style:normal;color:var(--green);}
+.section-sub{font-size:17px;color:var(--text2);max-width:560px;margin:0 auto 48px;}
+.section-sub strong{color:#fff;}
+.billing-toggle{display:inline-flex;align-items:center;gap:0;background:var(--navy2);border:1px solid var(--border);border-radius:100px;padding:4px;margin-bottom:48px;}
+.toggle-btn{padding:8px 24px;border-radius:100px;border:none;font-family:var(--font-sans);font-size:14px;font-weight:600;cursor:pointer;transition:all .25s;background:transparent;color:var(--text3);}
+.toggle-btn.active{background:var(--green);color:var(--navy);}
+.toggle-btn.active.yearly{background:var(--blue);color:#fff;}
+.save-badge{display:inline-block;background:rgba(255,203,71,0.15);border:1px solid rgba(255,203,71,0.25);color:var(--gold);font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;margin-left:8px;}
+.pricing-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:24px;max-width:820px;margin:0 auto;text-align:left;}
+.pricing-card{border-radius:20px;padding:40px;border:1px solid var(--border);background:var(--card);position:relative;overflow:hidden;display:flex;flex-direction:column;transition:all .3s cubic-bezier(0.25,0.8,0.25,1);cursor:pointer;}
+.pricing-card.featured{background:linear-gradient(135deg,rgba(0,232,122,0.08),rgba(26,140,255,0.05));border-color:rgba(0,232,122,0.3);transform:scale(1.02);box-shadow:0 20px 60px rgba(0,0,0,0.3);}
+.pricing-card:not(.featured):hover{border-color:rgba(0,232,122,0.4);box-shadow:0 16px 40px rgba(0,232,122,0.15);transform:translateY(-5px);}
+.pricing-card.featured:hover{border-color:rgba(0,232,122,0.6);box-shadow:0 24px 60px rgba(0,232,122,0.35);transform:scale(1.03) translateY(-4px);}
+.pricing-label{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:24px;}
+.pricing-card.featured .pricing-label{color:var(--green);}
+.pricing-badge{position:absolute;top:20px;right:20px;background:var(--green);color:var(--navy);font-size:11px;font-weight:700;padding:5px 12px;border-radius:100px;animation:badgePulse 2.5s ease infinite;}
+@keyframes badgePulse{0%,100%{box-shadow:0 0 0 0 rgba(0,232,122,0.3)}50%{box-shadow:0 0 0 6px rgba(0,232,122,0)}}
+.price{font-size:48px;font-weight:800;color:#fff;line-height:1;margin-bottom:4px;letter-spacing:-1px;transition:all .3s;}
+.price span{font-size:20px;color:var(--text3);font-weight:400;letter-spacing:0;}
+.price-sub{font-size:13px;color:var(--text3);margin-bottom:28px;}
+.price-free-tag{font-size:16px;font-weight:700;color:var(--green);margin-bottom:8px;}
+.feature-list{list-style:none;margin-bottom:28px;flex:1;}
+.feature-list li{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--text2);padding:9px 0;border-bottom:1px solid var(--border);}
+.feature-list li:last-child{border:none}
+.feature-list li::before{content:'✓';color:var(--green);font-weight:800;font-size:13px;margin-top:1px;flex-shrink:0;}
+.feature-list.limited li::before{content:'○';color:var(--text3);}
+.feature-list li.highlight{color:var(--text);}
+.feature-list li.highlight::before{color:var(--green);}
+.pricing-cta{width:100%;padding:16px;border-radius:12px;font-family:var(--font-sans);font-size:15px;font-weight:700;transition:all .25s;border:none;text-align:center;letter-spacing:0.3px;pointer-events:none;}
+.pricing-cta.primary{background:var(--green);color:var(--navy);}
+.pricing-cta.outline{background:transparent;color:var(--text);border:1px solid var(--border);}
+.savings-proof{max-width:820px;margin:32px auto 0;background:linear-gradient(135deg,rgba(0,232,122,0.06),rgba(26,140,255,0.04));border:1px solid rgba(0,232,122,0.15);border-radius:14px;padding:20px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.savings-proof p{font-size:14px;color:var(--text2);line-height:1.6;}
+.savings-proof p strong{color:#fff;}
+.savings-roi{display:flex;gap:16px;flex-shrink:0;flex-wrap:wrap;}
+.roi-chip{background:rgba(0,232,122,0.1);border:1px solid rgba(0,232,122,0.2);color:var(--green);font-size:13px;font-weight:700;padding:6px 16px;border-radius:100px;}
+.biz-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:0 auto;}
+.biz-card{background:var(--navy2);border:1px solid var(--border);border-radius:20px;padding:36px;transition:all .3s cubic-bezier(0.25,0.8,0.25,1);opacity:0;transform:translateY(24px);cursor:pointer;}
+.biz-card.visible{opacity:1;transform:translateY(0);}
+.biz-card:nth-child(1){transition:all .6s ease .0s;}.biz-card:nth-child(2){transition:all .6s ease .12s;}
+.biz-card:hover{border-color:rgba(0,232,122,0.4);transform:translateY(-5px) !important;box-shadow:0 20px 50px rgba(0,232,122,0.15);}
+.card-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;}
+.biz-card h3{font-size:19px;font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:-0.3px;}
+.biz-card p{font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:20px;}
+.biz-features{list-style:none;margin-bottom:24px;display:flex;flex-direction:column;gap:7px;}
+.biz-features li{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text2);}
+.biz-features li::before{content:"✓";font-weight:800;font-size:12px;flex-shrink:0;margin-top:1px;}
+.biz-card:nth-child(1) .biz-features li::before{color:var(--green);}
+.biz-card:nth-child(2) .biz-features li::before{color:var(--purple);}
+.btn-small{display:inline-block;font-family:var(--font-sans);font-size:13px;font-weight:700;padding:10px 22px;border-radius:10px;border:none;transition:all .2s;pointer-events:none;}
+.btn-small.primary{background:var(--green);color:var(--navy);}
+.btn-small.secondary{background:transparent;color:var(--text);border:1px solid var(--border);}
+.faq-wrap{max-width:820px;margin:0 auto;}
+.faq-item{background:var(--navy2);border:1px solid var(--border);border-radius:14px;margin-bottom:12px;overflow:hidden;transition:border-color .3s;}
+.faq-item.open{border-color:rgba(0,232,122,0.25);}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;cursor:pointer;font-size:16px;font-weight:600;color:#fff;gap:16px;user-select:none;}
+.faq-q:hover{color:var(--green);}
+.faq-icon{width:28px;height:28px;border-radius:50%;background:var(--navy3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;font-weight:700;color:var(--text3);transition:all .3s;}
+.faq-item.open .faq-icon{background:rgba(0,232,122,0.1);border-color:rgba(0,232,122,0.25);color:var(--green);transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease;padding:0 24px;}
+.faq-item.open .faq-a{max-height:300px;padding:0 24px 20px;}
+.faq-a p{font-size:14px;color:var(--text2);line-height:1.7;}
+.faq-a p strong{color:#fff;}
+@media(max-width:768px){.pricing-grid,.biz-grid{grid-template-columns:1fr;}.pricing-card.featured:hover{transform:scale(1) translateY(-4px);}.pricing-card.featured{transform:scale(1);}.savings-proof{flex-direction:column;}.savings-roi{justify-content:center;}}
+</style>
+<div class="section" style="text-align:center">
+  <div class="section-badge">Simple Pricing</div>
+  <h2 class="section-title">Start free.<br><em>Upgrade when you're convinced.</em></h2>
+  <p class="section-sub">Sri Lanka's best <strong>free budgeting app</strong> 3 months of full premium access with no credit card required. When your <strong>automated expense tracker</strong> starts saving you LKR 5,000+ monthly, the upgrade pays for itself.</p>
+  <div>
+    <div class="billing-toggle">
+      <button class="toggle-btn active" id="btn-monthly" onclick="setBilling('monthly')">Monthly</button>
+      <button class="toggle-btn" id="btn-yearly" onclick="setBilling('yearly')">Yearly <span class="save-badge">Save 20%</span></button>
+    </div>
+  </div>
+  <div class="pricing-grid">
+    <div class="pricing-card" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScVD6Wd8KT0Xher2QumZnWNSIYL9tj5FDA7RmfUYQ91FC1_ow/viewform?usp=header','_blank')">
+      <div class="pricing-label">FREE FOREVER</div>
+      <div class="price" id="price-free">LKR 0<span>/mo</span></div>
+      <div class="price-sub">No credit card needed ever</div>
+      <ul class="feature-list limited">
+        <li>Automatic bank SMS expense tracking</li>
+        <li>Manual &amp; voice expense entry</li>
+        <li>Basic spending categories</li>
+        <li>Receipt photo storage (up to 20)</li>
+        <li>Basic monthly expense summary</li>
+      </ul>
+      <button class="pricing-cta outline">Get Free Budgeting App →</button>
+    </div>
+    <div class="pricing-card featured" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScVD6Wd8KT0Xher2QumZnWNSIYL9tj5FDA7RmfUYQ91FC1_ow/viewform?usp=header','_blank')">
+      <div class="pricing-label">PREMIUM PLAN</div>
+      <div class="pricing-badge">3 MONTHS FREE</div>
+      <div class="price-free-tag">First 3 months FREE →</div>
+      <div class="price" id="price-premium">LKR 1,500<span>/mo</span></div>
+      <div class="price-sub" id="price-sub-premium">≈ $4.99 USD · Cancel anytime · No lock-in</div>
+      <ul class="feature-list">
+        <li>Everything in Free, plus:</li>
+        <li class="highlight">Real-time pre-purchase spending alerts</li>
+        <li class="highlight">AI-powered financial dashboard</li>
+        <li class="highlight">Advanced savings analytics &amp; forecasting</li>
+        <li class="highlight">Business subscription manager</li>
+        <li class="highlight">Professional financial reports (PDF &amp; CSV)</li>
+        <li class="highlight">SME expense tracker &amp; reports</li>
+        <li class="highlight">Unlimited OCR receipt storage</li>
+        <li class="highlight">Tax reimbursement claim management</li>
+        <li class="highlight">Priority customer support</li>
+        <li class="highlight">All 5 AI spending personas unlocked</li>
+      </ul>
+      <button class="pricing-cta primary">🚀 Start Free Trial — No Card Needed</button>
+    </div>
+  </div>
+  <div class="savings-proof">
+    <p>After 3 months: <strong>LKR 1,500/month</strong>. Average SpendWise user saves <strong>LKR 5,000+ monthly</strong> using pre-purchase spending alerts alone. Your subscription pays for itself <strong>3× over</strong> guaranteed or your money back.</p>
+    <div class="savings-roi"><div class="roi-chip">💰 3× ROI guarantee</div><div class="roi-chip">✓ Cancel anytime</div><div class="roi-chip">🔒 PDPA 2022 compliant</div></div>
+  </div>
+</div>
+<div class="section" style="text-align:center">
+  <div class="section-badge">For Business</div>
+  <h2 class="section-title">SpendWise for <em>Retailers &amp; Corporate</em></h2>
+  <p class="section-sub"><strong>Anonymised retail data insights</strong> for retailers, and <strong>corporate card &amp; tax reimbursement management</strong> for enterprise teams both PDPA 2022 compliant.</p>
+  <div class="biz-grid" id="bizGrid">
+    <div class="biz-card" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScVD6Wd8KT0Xher2QumZnWNSIYL9tj5FDA7RmfUYQ91FC1_ow/viewform?usp=header','_blank')">
+      <div class="card-icon" style="background:linear-gradient(135deg,rgba(0,232,122,0.15),rgba(26,140,255,0.1));border:1px solid rgba(0,232,122,0.2);">📊</div>
+      <div style="display:inline-block;background:rgba(0,232,122,0.1);color:var(--green);font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-bottom:12px;">Retail partner programme</div>
+      <h3>Retail partner data &amp; consumer insights</h3>
+      <p>Access fully <strong style="color:#fff;">anonymised, aggregated consumer spending data</strong> from SpendWise users across Sri Lanka with full PDPA 2022 consent and compliance. Use real-time retail insights for demand forecasting, inventory planning, and <strong style="color:#fff;">targeted discount campaigns</strong>. No personal data shared only buying pattern metadata.</p>
+      <ul class="biz-features"><li>Anonymised consumer spending trends</li><li>Retail demand forecasting data</li><li>Targeted discount campaign intelligence</li><li>100% PDPA 2022 compliant</li></ul>
+      <button class="btn-small primary">Enquire for Business →</button>
+    </div>
+    <div class="biz-card" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScVD6Wd8KT0Xher2QumZnWNSIYL9tj5FDA7RmfUYQ91FC1_ow/viewform?usp=header','_blank')">
+      <div class="card-icon" style="background:linear-gradient(135deg,rgba(168,85,247,0.15),rgba(26,140,255,0.1));border:1px solid rgba(168,85,247,0.2);">💼</div>
+      <div style="display:inline-block;background:rgba(168,85,247,0.1);color:var(--purple);font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-bottom:12px;">Corporate expense plan</div>
+      <h3>Corporate card &amp; tax reimbursement management</h3>
+      <p>Manage all employee <strong style="color:#fff;">corporate card expense claims</strong> in one place. Auto-tracks transactions via bank SMS, categorises fuel, meals, and business travel, generates <strong style="color:#fff;">Inland Revenue-ready tax reimbursement reports</strong>, and enables one-click submission to HR or Finance. Custom enterprise pricing available.</p>
+      <ul class="biz-features"><li>Corporate card tracking via bank SMS</li><li>Tax reimbursement claim management</li><li>Inland Revenue-ready expense reports</li><li>Per diem &amp; travel management</li></ul>
+      <button class="btn-small secondary">Get Enterprise Quote →</button>
+    </div>
+  </div>
+</div>
+<div class="section" style="text-align:center">
+  <div class="section-badge">FAQ</div>
+  <h2 class="section-title">Common <em>questions.</em></h2>
+  <br>
+  <div class="faq-wrap" id="faqWrap">
+    <div class="faq-item" onclick="toggleFaqPricing(this)"><div class="faq-q">Does SpendWise need my bank password or login credentials?<div class="faq-icon">+</div></div><div class="faq-a"><p>No. SpendWise never asks for bank credentials, passwords, or third-party login access. We only request read permission for your SMS inbox specifically bank transaction messages. Your banking app and all credentials remain entirely private and are never involved in the SpendWise setup process. <strong>All major Sri Lankan banks are supported instantly.</strong></p></div></div>
+    <div class="faq-item" onclick="toggleFaqPricing(this)"><div class="faq-q">Which Sri Lankan banks are supported by this budgeting app?<div class="faq-icon">+</div></div><div class="faq-a"><p>SpendWise supports all major Sri Lankan banks and digital wallets including <strong>Sampath Bank, Commercial Bank, BOC, HNB, People's Bank, NSB, NDB, Seylan, Citi, HSBC</strong>, and all major digital wallets: FriMi, eZ Cash, and iPay. If your bank sends SMS transaction alerts, SpendWise can track it automatically.</p></div></div>
+    <div class="faq-item" onclick="toggleFaqPricing(this)"><div class="faq-q">What happens after the 3-month free trial ends?<div class="faq-icon">+</div></div><div class="faq-a"><p>At the end of your free trial, you'll be asked to confirm your premium subscription at <strong>LKR 1,500/month</strong>. If you choose not to upgrade, you're automatically moved to the free tier basic bank SMS tracking continues at no cost. <strong>No charge ever occurs without your explicit confirmation.</strong> There's no lock-in, no cancellation fees, and no credit card is required to start.</p></div></div>
+    <div class="faq-item" onclick="toggleFaqPricing(this)"><div class="faq-q">Is my financial data private under PDPA 2022?<div class="faq-icon">+</div></div><div class="faq-a"><p>Yes. SpendWise is built from the ground up to comply with Sri Lanka's <strong>Personal Data Protection Act No. 9 of 2022 (PDPA 2022)</strong>. No personal data is ever sold. Any anonymised spending data shared with retail partners requires your explicit opt-in consent and is aggregated no individual transaction data or personal identifiers are ever shared with third parties.</p></div></div>
+    <div class="faq-item" onclick="toggleFaqPricing(this)"><div class="faq-q">Can I use SpendWise to track corporate card expenses and tax reimbursements?<div class="faq-icon">+</div></div><div class="faq-a"><p>Yes. The premium plan includes full <strong>corporate card tracking</strong> via bank SMS, automatic categorisation of fuel, meals, accommodation, and business travel, and one-click <strong>Inland Revenue-ready expense reports</strong> for tax reimbursement submission to HR or Finance. For enterprise plans covering entire teams, contact us for custom pricing.</p></div></div>
+    <div class="faq-item" onclick="toggleFaqPricing(this)"><div class="faq-q">Is SpendWise a good QuickBooks alternative for Sri Lankan SMEs?<div class="faq-icon">+</div></div><div class="faq-a"><p>Yes — SpendWise is designed as a lightweight, affordable alternative to expensive accounting software like QuickBooks and SAP. At <strong>LKR 1,500/month</strong> versus LKR 15,000+/month for QuickBooks, SpendWise provides automated expense categorisation, OCR receipt scanning, one-click professional reports, and subscription management covering 90% of what an SME needs without the enterprise price tag. <strong>No per-seat fees. No accountant add-ons.</strong></p></div></div>
+  </div>
+</div>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-nav">
+      <div class="copyright">© 2026 SpendWise Ltd. Sri Lanka.</div>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/ravidu-senajith/" target="_blank" rel="noopener" title="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/spendwiselk/" target="_blank" rel="noopener" title="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 1.76-6.98 6.208-.058 1.281-.072 1.688-.072 4.948s.014 3.667.072 4.947c.2 4.441 2.618 5.998 6.98 6.195 1.28.058 1.689.072 4.947.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-1.762 6.979-6.195.059-1.28.073-1.689.073-4.947 0-3.259-.014-3.667-.072-4.947-.196-4.439-2.618-5.999-6.979-6.208-1.28-.058-1.689-.072-4.948-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://github.com/Whi7erose" target="_blank" rel="noopener" title="GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/navbar.js"></script>
+  <script>
+function setBilling(mode){const btnM=document.getElementById('btn-monthly');const btnY=document.getElementById('btn-yearly');const pricePremium=document.getElementById('price-premium');const priceSub=document.getElementById('price-sub-premium');if(mode==='monthly'){btnM.classList.add('active');btnM.classList.remove('yearly');btnY.classList.remove('active','yearly');pricePremium.innerHTML='LKR 1,500<span>/mo</span>';priceSub.textContent='≈ $4.99 USD · Cancel anytime · No lock-in';}else{btnY.classList.add('active','yearly');btnM.classList.remove('active');pricePremium.innerHTML='<span style="font-size:20px;color:var(--text3);text-decoration:line-through;">1,500</span> LKR 1,200<span>/mo</span>';priceSub.innerHTML='Billed annually (LKR 14,400/yr) · Save LKR 3,600 · <span style="color:var(--gold);font-weight:700;">Best value</span>';}}
+function toggleFaqPricing(el){const isOpen=el.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(f=>f.classList.remove('open'));if(!isOpen) el.classList.add('open');}
+const bizCards=document.querySelectorAll('.biz-card');const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add('visible');});},{threshold:0.15});bizCards.forEach(c=>obs.observe(c));
+  </script>
+</body>
+</html>

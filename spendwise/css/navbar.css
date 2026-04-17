@@ -1,0 +1,87 @@
+/* ================================================================
+   SpendWise — Navbar CSS
+   Styles for the shared sticky navigation bar.
+   Paired with js/navbar.js for mobile toggle logic.
+================================================================ */
+
+.sw-nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(5,14,31,0.92);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+  height:64px;
+  transition:box-shadow .3s;
+}
+.sw-nav.scrolled{box-shadow:0 8px 40px rgba(0,0,0,0.4);}
+
+.nav-inner{
+  max-width:1300px;
+  margin:0 auto;
+  padding:0 28px;
+  height:100%;
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+
+/* Brand */
+.nav-brand{
+  display:flex;align-items:center;gap:10px;
+  text-decoration:none;flex-shrink:0;
+}
+.nav-brand img{height:32px;width:auto;}
+.nav-brand span{font-size:19px;font-weight:800;color:#fff;letter-spacing:-0.5px;}
+
+/* Links */
+.nav-links{display:flex;align-items:center;gap:2px;flex:1;}
+.nav-link{
+  padding:6px 13px;border-radius:8px;
+  font-size:13.5px;font-weight:600;
+  color:var(--text2);text-decoration:none;
+  transition:all .2s;white-space:nowrap;
+}
+.nav-link:hover{color:#fff;background:rgba(255,255,255,0.06);}
+.nav-link.active{color:var(--green);background:rgba(0,232,122,0.1);}
+
+/* CTA button */
+.nav-actions{display:flex;align-items:center;gap:12px;margin-left:auto;flex-shrink:0;}
+.btn-nav-cta{
+  background:var(--green);color:var(--navy);
+  font-size:13px;font-weight:700;
+  padding:9px 20px;border-radius:100px;
+  text-decoration:none;transition:all .2s;
+  white-space:nowrap;
+}
+.btn-nav-cta:hover{background:var(--green2);transform:translateY(-1px);}
+
+/* Hamburger */
+.hamburger{
+  display:none;flex-direction:column;gap:5px;
+  background:none;border:none;cursor:pointer;
+  padding:8px;border-radius:8px;transition:background .2s;
+}
+.hamburger:hover{background:rgba(255,255,255,0.06);}
+.hamburger span{
+  display:block;width:22px;height:2px;
+  background:var(--text);border-radius:2px;transition:all .3s ease;
+}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+/* Mobile */
+@media(max-width:960px){
+  .hamburger{display:flex;}
+  .nav-links{
+    display:none;
+    position:absolute;top:64px;left:0;right:0;
+    flex-direction:column;
+    background:var(--navy2);
+    border-bottom:1px solid var(--border);
+    padding:14px 20px 20px;gap:4px;
+  }
+  .nav-links.open{display:flex;}
+  .nav-link{padding:11px 14px;}
+  .btn-nav-cta{display:none;}
+}

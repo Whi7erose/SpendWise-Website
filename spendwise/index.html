@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpendWise — Budgeting App Sri Lanka | Automated Expense Tracker & Spending Alerts</title>
+<meta name="description" content="SpendWise is Sri Lanka's first automated budgeting app. Automatically tracks expenses via bank SMS alerts, sends real-time pre-purchase spending alerts, and saves users LKR 5,000+ monthly. Free 3-month trial — no manual input required.">
+<meta name="keywords" content="budgeting app Sri Lanka, automated expense tracker, bank SMS expense tracking, spending alert app, save money Sri Lanka, free budgeting app, financial tracking app Sri Lanka, expense management app Colombo, corporate card tracker, tax reimbursement app Sri Lanka, personal finance app LKR, automatic SMS tracker">
+<meta property="og:title" content="SpendWise — Budgeting App Sri Lanka | Automated Expense Tracker & Spending Alerts">
+<meta property="og:description" content="SpendWise is Sri Lanka's first automated budgeting app. Automatically tracks expenses via bank SMS alerts, sends real-time pre-purchase spending alerts, and saves users LKR 5,000+ monthly. Free 3-month trial — no manual input required.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/pages/index.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%2300e87a'/><text y='.9em' font-size='60' x='18'>💰</text></svg>">
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav class="sw-nav" id="sw-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/images/logo.png" alt="SpendWise logo">
+        <span>SpendWise</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html"          class="nav-link">Home</a>
+        <a href="products.html"       class="nav-link">Products</a>
+        <a href="features.html"       class="nav-link">Features</a>
+        <a href="how-it-works.html"   class="nav-link">How It Works</a>
+        <a href="pricing.html"        class="nav-link">Pricing</a>
+        <a href="faq.html"            class="nav-link">FAQ</a>
+        <a href="contact.html"        class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="pricing.html" class="btn-nav-cta">Start Free Trial</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+<!-- HERO -->
+<div class="hero-grid"></div>
+<div class="hero-glow"></div>
+
+<div class="hero-split">
+  <div class="hero-left">
+    <div class="seo-badge">
+      <span></span>
+      Sri Lanka's #1 automated budgeting app
+    </div>
+    <h1>
+      Sri Lanka's smartest<br>
+      <em>budgeting app.</em><br>
+      Zero manual input.
+    </h1>
+    <p style="font-size:17px;color:var(--text2);margin-bottom:28px;line-height:1.7;">
+      The only <strong style="color:#fff;">automated expense tracker</strong> that reads your
+      bank SMS alerts in real time sending <strong style="color:#fff;">pre-purchase spending
+      alerts</strong> before you overspend. Save money in Sri Lanka without lifting a finger.
+    </p>
+    <ul class="hero-check-list">
+      <li>
+        <span class="check-icon">✓</span>
+        <span class="check-title">Automated tracking.</span>
+        <span class="check-desc">Automatic bank SMS expense tracking.  no manual input, ever.</span>
+      </li>
+      <li>
+        <span class="check-icon">✓</span>
+        <span class="check-title">Spending alerts.</span>
+        <span class="check-desc">Real-time pre-purchase alerts before you spend. Sri Lanka's first financial tracking app to do this.</span>
+      </li>
+      <li>
+        <span class="check-icon">✓</span>
+        <span class="check-title">PDPA 2022 Compliant.</span>
+        <span class="check-desc">No bank login credentials required. All expense data is strictly encrypted.</span>
+      </li>
+    </ul>
+    <div class="use-case-section">
+      <p>I want to:</p>
+      <div class="use-case-cards">
+        <a href="personal-finance.html" class="use-case-card" title="Personal finance app Sri Lanka — manage budgets and save money">
+          <div class="radio-circle"></div>
+          <span>Manage personal finances &amp; save money in Sri Lanka</span>
+        </a>
+        <a href="business-finance.html" class="use-case-card" title="SME automated expense tracker Sri Lanka">
+          <div class="radio-circle"></div>
+          <span>Automated expense tracker for my SME</span>
+        </a>
+        <a href="corporate-finance.html" class="use-case-card" title="Corporate card tracker and tax reimbursement app Sri Lanka">
+          <div class="radio-circle"></div>
+          <span>Corporate card tracker &amp; tax reimbursement management</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-form" id="form-container">
+      <input type="email" id="email-input" placeholder="Email Address">
+      <button onclick="validateAndNavigate()">Start Free Trial</button>
+    </div>
+    <div id="email-error">Please enter a valid email address.</div>
+    <div id="success-message">
+      🎉 You're on the list! We'll email you the moment we launch SpendWise.
+    </div>
+    <a href="https://accounts.google.com/signin/v2/identifier" target="_blank" class="google-sso-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+        <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+        <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+        <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+        <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+        <path fill="none" d="M0 0h48v48H0z"/>
+      </svg>
+      Continue with Google
+    </a>
+  </div>
+  <div class="hero-right">
+    <img
+      src="https://www.kiwi-money.com/_next/image?url=%2Fimages%2Fhero%2Fhero-preview.png&w=1200&q=75"
+      alt="SpendWise budgeting app Sri Lanka — automated expense tracker and spending alert dashboard"
+      class="hero-image"
+      loading="eager">
+  </div>
+</div>
+
+<div style="padding:0 48px;max-width:1200px;margin:0 auto 80px">
+  <div class="stat-row">
+    <div class="stat-item"><div class="stat-num">73%</div><div class="stat-label">of users quit manual budgeting apps</div></div>
+    <div class="stat-item"><div class="stat-num">LKR 0</div><div class="stat-label">manual expense input required</div></div>
+    <div class="stat-item"><div class="stat-num">3s</div><div class="stat-label">real-time spending alert speed</div></div>
+    <div class="stat-item"><div class="stat-num">LKR 5K+</div><div class="stat-label">avg monthly savings in Sri Lanka</div></div>
+  </div>
+</div>
+
+<div class="section" style="padding-bottom:0">
+  <div class="section-badge">Built for everyone</div>
+  <h2 class="section-title">One app.<br><em>Every financial life.</em></h2>
+  <p class="section-sub">
+    Whether you're a student trying to <strong style="color:#fff;">save money in Sri Lanka</strong>,
+    an SME owner who refuses to pay for expensive software like QuickBooks,
+    or a corporate employee drowning in <strong style="color:#fff;">tax reimbursement paperwork</strong>
+    SpendWise was built for all three.
+  </p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:40px;">
+    <div class="card" style="border-color:rgba(0,232,122,0.2);position:relative;overflow:hidden;">
+      <div style="position:absolute;top:-40px;right:-40px;width:160px;height:160px;border-radius:50%;background:var(--green);opacity:0.06;pointer-events:none;"></div>
+      <div class="card-icon">👤</div>
+      <div style="display:inline-block;background:rgba(0,232,122,0.1);color:var(--green);font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:14px;">For individuals</div>
+      <h3>Personal finance &amp; saving money</h3>
+      <p style="color:var(--green);font-style:italic;font-size:13px;margin-bottom:12px;">"I want to stop overspending automatically."</p>
+      <p>University students and working professionals who want to manage their budget without manually entering every transaction. SpendWise reads your bank SMS and does it for you.</p>
+      <ul style="list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:8px;">
+        <li style="display:flex;gap:10px;font-size:13px;color:var(--text2);"><span style="color:var(--green);font-weight:800;">✓</span>Automatic bank SMS expense tracking</li>
+        <li style="display:flex;gap:10px;font-size:13px;color:var(--text2);"><span style="color:var(--green);font-weight:800;">✓</span>Real-time pre-purchase spending alerts</li>
+        <li style="display:flex;gap:10px;font-size:13px;color:var(--text2);"><span style="color:var(--green);font-weight:800;">✓</span>Personalised savings dashboard (LKR)</li>
+        <li style="display:flex;gap:10px;font-size:13px;color:var(--text2);"><span style="color:var(--green);font-weight:800;">✓</span>Discount alerts near Keells, Cargills &amp; more</li>
+      </ul>
+    </div>
+    <div class="card" style="border-color:rgba(26,140,255,0.2);position:relative;overflow:hidden;">
+      <div style="position:absolute;top:-40px;right:-40px;width:160px;height:160px;border-radius:50%;background:var(--blue);opacity:0.06;pointer-events:none;"></div>
+      <div class="card-icon">🏢</div>
+      <div style="display:inline-block;background:rgba(26,140,255,0.1);color:var(--blue);font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:14px;">For SME owners</div>
+      <h3>Business tracking no QuickBooks needed</h3>
+      <p style="color:var(--blue);font-style:italic;font-size:13px;margin-bottom:12px;">"I need tracking without the enterprise price tag."</p>
+      <p>SME owners who need professional expense management but won't pay LKR 15,000+/month for QuickBooks or SAP. SpendWise gives you 90% of the functionality at a fraction of the cost.</p>
+      <ul style="list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:8px;">
+        <li style="display:flex;gap:10px;font-size:13px;color:var(--text2);"><span style="color:var(--blue);font-weight:800;">✓</span>Auto-categorises all business expenses</li>
+        <li style="display:flex;gap:10px;font-size:13px;color:var(--text2);"><span style="color:var(--blue);font-weight:800;">✓</span>One-click professional expense reports</li>
+        <li style="display:flex;gap:10px;font-size:13px;color:var(--text2);"><span style="color:var(--blue);font-weight:800;">✓</span>Subscription manager — no surprise renewals</li>
+        <li style="display:flex;gap:10px;font-size:13px;color:var(--text2);"><span style="color:var(--blue);font-weight:800;">✓</span>Export-ready reports for accountants</li>
+      </ul>
+    </div>
+    <div class="card" style="border-color:rgba(255,203,71,0.2);position:relative;overflow:hidden;">
+      <div style="position:absolute;top:-40px;right:-40px;width:160px;height:160px;border-radius:50%;background:var(--gold);opacity:0.06;pointer-events:none;"></div>
+      <div class="card-icon">💼</div>
+      <div style="display:inline-block;background:rgba(255,203,71,0.1);color:var(--gold);font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:14px;">For corporate employees</div>
+      <h3>Corporate card &amp; tax reimbursement</h3>
+      <p style="color:var(--gold);font-style:italic;font-size:13px;margin-bottom:12px;">"I need my reimbursements fast and accurate."</p>
+      <p>Corporate employees and business travellers who manage corporate cards and need to submit tax-eligible reimbursement claims for fuel, meals, accommodation, and travel.</p>
+      <ul style="list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:8px;">
+        <li style="display:flex;gap:10px;font-size:13px;color:var(--text2);"><span style="color:var(--gold);font-weight:800;">✓</span>Auto-tracks corporate card transactions via SMS</li>
+        <li style="display:flex;gap:10px;font-size:13px;color:var(--text2);"><span style="color:var(--gold);font-weight:800;">✓</span>Categorises fuel, meals, travel &amp; accommodation</li>
+        <li style="display:flex;gap:10px;font-size:13px;color:var(--text2);"><span style="color:var(--gold);font-weight:800;">✓</span>Inland Revenue-ready expense reports</li>
+        <li style="display:flex;gap:10px;font-size:13px;color:var(--text2);"><span style="color:var(--gold);font-weight:800;">✓</span>One-click reimbursement submission to HR</li>
+      </ul>
+    </div>
+  </div>
+  <a href="pricing.html" style="text-decoration: none; display: block; transition: transform 0.2s ease;">
+    <div style="background:linear-gradient(135deg,rgba(0,232,122,0.06),rgba(26,140,255,0.04)); border:1px solid rgba(0,232,122,0.15); border-radius:16px; padding:28px 36px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; cursor: pointer;"
+         onmouseover="this.style.borderColor='rgba(0,232,122,0.4)'; this.parentElement.style.transform='translateY(-2px)';"
+         onmouseout="this.style.borderColor='rgba(0,232,122,0.15)'; this.parentElement.style.transform='translateY(0)';">
+      <div>
+        <h4 style="font-size:18px; font-weight:700; color:#fff; margin-bottom:6px; letter-spacing:-0.3px;">One plan covers all three. Start completely free.</h4>
+        <p style="font-size:14px; color:var(--text2); line-height:1.6; max-width:560px;">
+          Whether you're saving money at Keells, running your SME, or submitting <strong style="color:#fff;">tax reimbursement claims</strong> for a business trip
+          <strong style="color:#fff;">no separate plans, no hidden enterprise fees, no QuickBooks-level pricing.</strong>
+        </p>
+      </div>
+      <div style="text-align:center; flex-shrink:0;">
+        <div style="font-size:36px; font-weight:800; color:var(--green); letter-spacing:-1px; line-height:1;">LKR 1,500<span style="font-size:16px; color:var(--text3); font-weight:400;">/mo</span></div>
+        <div style="font-size:12px; font-weight:700; color:var(--green); margin-top:4px; letter-spacing:0.5px;">↑ First 3 months FREE</div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="section">
+  <div class="section-badge">Why SpendWise</div>
+  <h2 class="section-title">Sri Lanka's only <em>automated expense tracker</em><br>that stops overspending before it happens.</h2>
+  <p class="section-sub">Every other financial tracking app in Sri Lanka shows you what you already spent. SpendWise is the only budgeting app that intervenes in real time before the money leaves your account.</p>
+  <div class="grid-3">
+    <div class="card"><div class="card-icon">📱</div><div class="kw-chip">Bank SMS tracking</div><h3>Automatic bank SMS expense tracking</h3><p>Reads your bank transaction SMS alerts the moment they arrive. No typing, no uploading your expenses are tracked automatically in under 3 seconds.</p></div>
+    <div class="card"><div class="card-icon">⚡</div><div class="kw-chip">Spending alerts</div><h3>Real-time pre-purchase spending alerts</h3><p>When you're near Keells, we check if Cargills offers a better price and alert you before you spend. Sri Lanka's first pre-purchase spending alert system.</p></div>
+    <div class="card"><div class="card-icon">🧠</div><div class="kw-chip">AI financial tracking</div><h3>AI-powered financial tracking app</h3><p>Our algorithm learns your spending patterns and builds a personalised financial plan unique to you not a generic template used by every other budgeting app.</p></div>
+    <div class="card"><div class="card-icon">🎙️</div><div class="kw-chip">Voice logging</div><h3>Voice expense logging</h3><p>Record any expense hands-free in seconds. Say "coffee at Barista, 480 rupees" SpendWise logs, categorises, and adds it to your expense tracker instantly.</p></div>
+    <div class="card"><div class="card-icon">🏢</div><div class="kw-chip">Corporate expense</div><h3>Corporate card tracker &amp; tax reimbursement</h3><p>Track corporate cards, categorise fuel, meals, and travel for tax reimbursement, and generate professional expense reports no accounting software needed.</p></div>
+    <div class="card"><div class="card-icon">🔒</div><div class="kw-chip">PDPA 2022</div><h3>PDPA 2022 compliant financial app</h3><p>Your financial data never leaves without your explicit consent. Built from the ground up to comply with Sri Lanka's Personal Data Protection Act 2022.</p></div>
+  </div>
+</div>
+
+<div class="section" style="padding-top:0;padding-bottom:60px;">
+  <div class="section-badge">User Stories</div>
+  <h2 class="section-title">Sri Lankans who save money<br>with our <em>free budgeting app.</em></h2>
+  <div class="grid-3">
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">"I saved LKR 6,200 in my first month using this budgeting app without changing any of my shopping habits. The spending alerts alone paid for the subscription 4× over."</div>
+      <div class="testimonial-author"><div class="author-avatar" style="background:linear-gradient(135deg,#00e87a,#1a8cff)">A</div><div><div class="author-name">Ameesh Silva</div><div class="author-role">Software Engineer, Colombo</div></div></div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">"As a freelancer, tracking tax reimbursements was a nightmare. SpendWise auto-categorises all my expenses and the financial reports are professional enough to send directly to clients."</div>
+      <div class="testimonial-author"><div class="author-avatar" style="background:linear-gradient(135deg,#ff4d6d,#ffcb47)">N</div><div><div class="author-name">Nishari Perera</div><div class="author-role">UX Designer, Kandy</div></div></div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">"I tried 3 other expense tracker apps before this. SpendWise is the only one I've used for more than two weeks the automated bank SMS tracking means I literally don't have to do anything."</div>
+      <div class="testimonial-author"><div class="author-avatar" style="background:linear-gradient(135deg,#a855f7,#1a8cff)">D</div><div><div class="author-name">Dahami Jayawardena</div><div class="author-role">University Student, Galle</div></div></div>
+    </div>
+  </div>
+</div>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-nav">
+      <div class="copyright">© 2026 SpendWise Ltd. Sri Lanka.</div>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/ravidu-senajith/" target="_blank" rel="noopener" title="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/spendwiselk/" target="_blank" rel="noopener" title="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 1.76-6.98 6.208-.058 1.281-.072 1.688-.072 4.948s.014 3.667.072 4.947c.2 4.441 2.618 5.998 6.98 6.195 1.28.058 1.689.072 4.947.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-1.762 6.979-6.195.059-1.28.073-1.689.073-4.947 0-3.259-.014-3.667-.072-4.947-.196-4.439-2.618-5.999-6.979-6.208-1.28-.058-1.689-.072-4.948-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://github.com/Whi7erose" target="_blank" rel="noopener" title="GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/navbar.js"></script>
+  <script>
+  function validateAndNavigate(){
+    const emailInput = document.getElementById('email-input');
+    const errorMsg = document.getElementById('email-error');
+    const formContainer = document.getElementById('form-container');
+    const successMsg = document.getElementById('success-message');
+    const emailValue = emailInput.value.trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(emailPattern.test(emailValue)){
+      errorMsg.style.display = 'none';
+      formContainer.style.display = 'none';
+      successMsg.style.display = 'block';
+    } else {
+      errorMsg.style.display = 'block';
+      formContainer.style.borderColor = 'var(--red)';
+      emailInput.focus();
+    }
+  }
+  document.getElementById('email-input').addEventListener('keypress',function(e){
+    if(e.key === 'Enter') validateAndNavigate();
+  });
+  </script>
+</body>
+</html>

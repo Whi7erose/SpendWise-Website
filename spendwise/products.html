@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpendWise Features — Automated Expense Tracker, SME Finance &amp; Corporate Card Management | Sri Lanka</title>
+<meta name="description" content="SpendWise features three products: personal budgeting app for Sri Lanka, SME automated expense tracker (no QuickBooks needed), and corporate card &amp; tax reimbursement management. Free 3-month trial.">
+<meta name="keywords" content="automated expense tracker Sri Lanka, personal budgeting app Sri Lanka, SME expense tracking app, corporate card tracker Sri Lanka, tax reimbursement app, financial tracking software Sri Lanka, bank SMS expense tracker, no QuickBooks alternative Sri Lanka, business expense management LKR">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%2300e87a'/><text y='.9em' font-size='60' x='18'>💰</text></svg>">
+<style>
+body{padding:80px 20px 40px;}
+.product-header{text-align:center;max-width:800px;margin:0 auto 60px;}
+.section-badge{display:inline-block;background:rgba(0,232,122,0.1);border:1px solid rgba(0,232,122,0.2);color:var(--green);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:20px;}
+.product-header h2{font-size:clamp(36px,5vw,56px);font-weight:800;color:#fff;line-height:1.1;letter-spacing:-1.5px;margin-bottom:16px;}
+.product-header h2 em{font-style:normal;background:linear-gradient(90deg,var(--green),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.product-header p{font-size:18px;color:var(--text2);max-width:640px;margin:0 auto;}
+.hub-container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.hub-card{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:40px 32px;text-decoration:none;display:flex;flex-direction:column;transition:all 0.3s cubic-bezier(0.25,0.46,0.45,0.94);position:relative;overflow:hidden;cursor:pointer;color:var(--text);}
+.hub-card:hover{transform:translateY(-8px);box-shadow:0 20px 60px rgba(0,0,0,0.5);}
+.card-personal:hover{border-color:rgba(26,140,255,0.5);background:linear-gradient(135deg,rgba(26,140,255,0.08),transparent);}
+.card-business:hover{border-color:rgba(255,203,71,0.5);background:linear-gradient(135deg,rgba(255,203,71,0.08),transparent);}
+.card-corporate:hover{border-color:rgba(168,85,247,0.5);background:linear-gradient(135deg,rgba(168,85,247,0.08),transparent);}
+.hub-icon{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:24px;}
+.icon-personal{background:rgba(26,140,255,0.1);border:1px solid rgba(26,140,255,0.2);}
+.icon-business{background:rgba(255,203,71,0.1);border:1px solid rgba(255,203,71,0.2);}
+.icon-corporate{background:rgba(168,85,247,0.1);border:1px solid rgba(168,85,247,0.2);}
+.hub-card h3{font-size:24px;font-weight:800;color:#fff;margin-bottom:8px;letter-spacing:-0.5px;}
+.hub-card .card-tagline{font-size:13px;font-weight:600;font-style:italic;margin-bottom:14px;}
+.card-personal .card-tagline{color:var(--blue);}
+.card-business .card-tagline{color:var(--gold);}
+.card-corporate .card-tagline{color:var(--purple);}
+.hub-card p{font-size:15px;color:var(--text2);line-height:1.6;margin-bottom:24px;flex-grow:1;}
+.card-features{list-style:none;margin-bottom:28px;display:flex;flex-direction:column;gap:8px;}
+.card-features li{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text2);line-height:1.4;}
+.card-personal .card-features li::before{content:"✓";color:var(--blue);font-weight:800;flex-shrink:0;}
+.card-business .card-features li::before{content:"✓";color:var(--gold);font-weight:800;flex-shrink:0;}
+.card-corporate .card-features li::before{content:"✓";color:var(--purple);font-weight:800;flex-shrink:0;}
+.kw-chip{display:inline-block;font-size:12px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:12px;}
+.card-personal .kw-chip{background:rgba(26,140,255,0.1);color:var(--blue);}
+.card-business .kw-chip{background:rgba(255,203,71,0.1);color:var(--gold);}
+.card-corporate .kw-chip{background:rgba(168,85,247,0.1);color:var(--purple);}
+.hub-link{font-size:14px;font-weight:700;display:flex;align-items:center;gap:8px;transition:gap 0.2s;margin-top:auto;}
+.card-personal .hub-link{color:var(--blue);}
+.card-business .hub-link{color:var(--gold);}
+.card-corporate .hub-link{color:var(--purple);}
+.hub-card:hover .hub-link{gap:12px;}
+.comparison-strip{max-width:1200px;margin:32px auto 0;background:linear-gradient(135deg,rgba(255,203,71,0.05),rgba(26,140,255,0.03));border:1px solid rgba(255,203,71,0.15);border-radius:16px;padding:24px 36px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+.comparison-strip p{font-size:14px;color:var(--text2);line-height:1.7;flex:1;}
+.comparison-strip .vs-chips{display:flex;gap:10px;flex-wrap:wrap;flex-shrink:0;}
+.vs-chip{background:rgba(255,255,255,0.04);border:1px solid var(--border);color:var(--text3);font-size:12px;font-weight:600;padding:5px 14px;border-radius:100px;text-decoration:line-through;}
+.vs-chip-ours{background:rgba(0,232,122,0.1);border:1px solid rgba(0,232,122,0.2);color:var(--green);font-size:12px;font-weight:700;padding:5px 14px;border-radius:100px;}
+.ecosystem-banner{max-width:1200px;margin:24px auto 0;background:var(--navy2);border:1px solid var(--border);border-radius:24px;padding:40px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:32px;}
+.ecosystem-text h4{font-size:22px;color:#fff;margin-bottom:8px;font-weight:700;}
+.ecosystem-text p{font-size:15px;color:var(--text3);max-width:600px;margin:0 auto;}
+.ecosystem-features{width:100%;max-width:800px;overflow:hidden;display:flex;mask-image:linear-gradient(to right,transparent,black 5%,black 95%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,black 5%,black 95%,transparent);}
+.eco-track{display:flex;gap:12px;width:max-content;animation:scroll-marquee 20s linear infinite;}
+.eco-track:hover{animation-play-state:paused;}
+.eco-feat{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--text);background:var(--card);padding:8px 16px;border-radius:100px;border:1px solid var(--border);white-space:nowrap;}
+.eco-feat span{color:var(--green);}
+@media(max-width:900px){
+  .hub-container{grid-template-columns:1fr;}
+  .comparison-strip{flex-direction:column;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav class="sw-nav" id="sw-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/images/logo.png" alt="SpendWise logo">
+        <span>SpendWise</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html"          class="nav-link">Home</a>
+        <a href="products.html"       class="nav-link">Products</a>
+        <a href="features.html"       class="nav-link">Features</a>
+        <a href="how-it-works.html"   class="nav-link">How It Works</a>
+        <a href="pricing.html"        class="nav-link">Pricing</a>
+        <a href="faq.html"            class="nav-link">FAQ</a>
+        <a href="contact.html"        class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="pricing.html" class="btn-nav-cta">Start Free Trial</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+<div class="product-header">
+  <div class="section-badge">All Products</div>
+  <h2>One platform.<br><em>Total financial control.</em></h2>
+  <p>From a <strong>personal budgeting app</strong> for everyday savings in Sri Lanka, to an <strong>SME expense tracker</strong> that replaces QuickBooks.</p>
+</div>
+<div class="hub-container">
+  <a href="personal-finance.html" class="hub-card card-personal">
+    <div class="hub-icon icon-personal">📱</div>
+    <div class="kw-chip">Personal budgeting app</div>
+    <h3>Personal Finance</h3>
+    <div class="card-tagline">"Save money in Sri Lanka automatically."</div>
+    <p>Automatically parse bank SMS alerts and send real-time <strong style="color:#fff;">spending alerts</strong> before you overspend.</p>
+    <ul class="card-features"><li>Automatic bank SMS tracking</li><li>Pre-purchase spending alerts</li><li>Personalised savings dashboard</li></ul>
+    <div class="hub-link">Explore Personal Solutions <span>→</span></div>
+  </a>
+  <a href="business-finance.html" class="hub-card card-business">
+    <div class="hub-icon icon-business">🏢</div>
+    <div class="kw-chip">SME expense tracker</div>
+    <h3>Business Finance</h3>
+    <div class="card-tagline">"Professional tracking. No QuickBooks price tag."</div>
+    <p>The <strong style="color:#fff;">SME expense tracker</strong> Sri Lankan business owners actually use. Ditch the spreadsheets.</p>
+    <ul class="card-features"><li>Automated expense categorisation</li><li>OCR receipt scanning &amp; storage</li><li>Professional expense reports</li></ul>
+    <div class="hub-link">Explore SME Solutions <span>→</span></div>
+  </a>
+  <a href="corporate-finance.html" class="hub-card card-corporate">
+    <div class="hub-icon icon-corporate">💼</div>
+    <div class="kw-chip">Corporate card &amp; reimbursement</div>
+    <h3>Corporate Finance</h3>
+    <div class="card-tagline">"Reimbursements processed fast. Always accurate."</div>
+    <p>Enterprise-grade <strong style="color:#fff;">corporate card tracking</strong> and <strong style="color:#fff;">tax reimbursement management</strong> for Sri Lanka.</p>
+    <ul class="card-features"><li>Corporate card auto-tracking</li><li>Tax reimbursement management</li><li>Inland Revenue-ready reports</li></ul>
+    <div class="hub-link">Explore Enterprise Solutions <span>→</span></div>
+  </a>
+</div>
+<div class="comparison-strip">
+  <p><strong>Why Sri Lankan SMEs choose SpendWise.</strong> Professional automated tracking without the enterprise price tag. <strong>No QuickBooks. No SAP.</strong></p>
+  <div class="vs-chips">
+    <div class="vs-chip">QuickBooks</div>
+    <div class="vs-chip">SAP</div>
+    <div class="vs-chip-ours">✓ SpendWise — LKR 1,500/mo</div>
+  </div>
+</div>
+<div class="ecosystem-banner">
+  <div class="ecosystem-text">
+    <h4>Powered by the SpendWise automated engine</h4>
+    <p>All three products share the same bank SMS parsing engine — Sri Lanka's most advanced infrastructure.</p>
+  </div>
+  <div class="ecosystem-features">
+    <div class="eco-track">
+      <div class="eco-feat"><span>✓</span> iOS &amp; Android</div>
+      <div class="eco-feat"><span>✓</span> PDPA 2022 Compliant</div>
+      <div class="eco-feat"><span>✓</span> Bank-Level Encryption</div>
+      <div class="eco-feat"><span>✓</span> All SL Banks Supported</div>
+      <div class="eco-feat"><span>✓</span> 3-Month Free Trial</div>
+      <div class="eco-feat"><span>✓</span> iOS &amp; Android</div>
+      <div class="eco-feat"><span>✓</span> PDPA 2022 Compliant</div>
+      <div class="eco-feat"><span>✓</span> Bank-Level Encryption</div>
+      <div class="eco-feat"><span>✓</span> All SL Banks Supported</div>
+      <div class="eco-feat"><span>✓</span> 3-Month Free Trial</div>
+    </div>
+  </div>
+</div>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-nav">
+      <div class="copyright">© 2026 SpendWise Ltd. Sri Lanka.</div>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/ravidu-senajith/" target="_blank" rel="noopener" title="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/spendwiselk/" target="_blank" rel="noopener" title="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 1.76-6.98 6.208-.058 1.281-.072 1.688-.072 4.948s.014 3.667.072 4.947c.2 4.441 2.618 5.998 6.98 6.195 1.28.058 1.689.072 4.947.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-1.762 6.979-6.195.059-1.28.073-1.689.073-4.947 0-3.259-.014-3.667-.072-4.947-.196-4.439-2.618-5.999-6.979-6.208-1.28-.058-1.689-.072-4.948-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://github.com/Whi7erose" target="_blank" rel="noopener" title="GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/navbar.js"></script>
+</body>
+</html>

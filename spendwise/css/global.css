@@ -1,0 +1,47 @@
+/* ================================================================
+   SpendWise — Global CSS
+   All :root design tokens and shared body/reset styles.
+   Every page links to this file first.
+================================================================ */
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --navy:#050e1f;
+  --navy2:#0b1a31;
+  --navy3:#112040;
+  --green:#00e87a;
+  --green2:#00c465;
+  --blue:#1a8cff;
+  --gold:#ffcb47;
+  --red:#ff4d6d;
+  --purple:#a855f7;
+  --pink:#ff4d6d;
+  --text:#e8f0fe;
+  --text2:#8ca5c8;
+  --text3:#5a7a9e;
+  --border:rgba(255,255,255,0.07);
+  --card:rgba(255,255,255,0.04);
+  --radius:16px;
+  --font-sans:"Google Sans Flex",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--navy);
+  color:var(--text);
+  font-family:var(--font-sans);
+  -webkit-font-smoothing:antialiased;
+  font-size:16px;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+/* ── KEYFRAME ANIMATIONS (shared across pages) ── */
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-15px)}100%{transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@keyframes panelIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes badgePulse{0%,100%{box-shadow:0 0 0 0 rgba(0,232,122,0.3)}50%{box-shadow:0 0 0 6px rgba(0,232,122,0)}}
+@keyframes scroll-marquee{0%{transform:translateX(0)}100%{transform:translateX(calc(-50% - 6px))}}

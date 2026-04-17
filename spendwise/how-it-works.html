@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How SpendWise Works — Automated Budgeting App Sri Lanka | Bank SMS Expense Tracking Setup</title>
+<meta name="description" content="How SpendWise works: download the Sri Lanka budgeting app, connect your bank SMS in 3 minutes, receive real-time pre-purchase spending alerts, and let AI build your personalised savings plan. No bank credentials required.">
+<meta name="keywords" content="how SpendWise works, automated budgeting app setup Sri Lanka, bank SMS expense tracker setup, pre-purchase spending alerts how it works, AI financial dashboard Sri Lanka, budgeting app Sri Lanka tutorial, automated expense tracker Sri Lanka setup">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/footer.css">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%2300e87a'/><text y='.9em' font-size='60' x='18'>💰</text></svg>">
+</head>
+<body style="padding-top:64px;">
+
+  <!-- ══ NAVBAR ══ -->
+  <nav class="sw-nav" id="sw-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/images/logo.png" alt="SpendWise logo">
+        <span>SpendWise</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html"          class="nav-link">Home</a>
+        <a href="products.html"       class="nav-link">Products</a>
+        <a href="features.html"       class="nav-link">Features</a>
+        <a href="how-it-works.html"   class="nav-link">How It Works</a>
+        <a href="pricing.html"        class="nav-link">Pricing</a>
+        <a href="faq.html"            class="nav-link">FAQ</a>
+        <a href="contact.html"        class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="pricing.html" class="btn-nav-cta">Start Free Trial</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#050e1f;--navy2:#0b1a31;--navy3:#112040;--green:#00e87a;--green2:#00c465;--blue:#1a8cff;--gold:#ffcb47;--purple:#a855f7;--pink:#ff4d6d;--text:#e8f0fe;--text2:#8ca5c8;--text3:#5a7a9e;--border:rgba(255,255,255,0.07);--card:rgba(255,255,255,0.04);--font-sans:"Google Sans Flex",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--text);font-family:var(--font-sans);-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.6;padding:80px 20px;overflow-x:hidden;}
+.how-header{text-align:center;max-width:800px;margin:0 auto 16px;}
+.section-badge{display:inline-block;background:rgba(0,232,122,0.1);border:1px solid rgba(0,232,122,0.2);color:var(--green);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:20px;}
+.how-header h2{font-size:clamp(36px,4vw,52px);font-weight:800;color:#fff;line-height:1.1;letter-spacing:-1.5px;margin-bottom:16px;}
+.how-header h2 em{font-style:normal;color:var(--green);}
+.how-subtitle{font-size:17px;color:var(--text2);max-width:580px;margin:0 auto;}
+.how-subtitle strong{color:#fff;}
+.keyword-line{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin:20px auto 60px;}
+.kw-pill{display:inline-block;background:rgba(0,232,122,0.07);border:1px solid rgba(0,232,122,0.15);color:var(--green);font-size:11px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;padding:4px 12px;border-radius:100px;}
+.stepper-wrap{max-width:900px;margin:0 auto 120px;position:relative;}
+.progress-bar-wrap{display:flex;align-items:center;justify-content:center;gap:0;margin-bottom:48px;position:relative;}
+.prog-step{display:flex;flex-direction:column;align-items:center;gap:8px;cursor:pointer;position:relative;z-index:1;}
+.prog-dot{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;background:var(--navy2);border:2px solid var(--border);color:var(--text3);transition:all .35s ease;}
+.prog-label{font-size:11px;font-weight:600;color:var(--text3);text-align:center;max-width:70px;line-height:1.2;transition:color .3s;}
+.prog-line{height:2px;flex:1;background:var(--border);transition:background .5s ease;position:relative;top:-20px;}
+.prog-line.done{background:var(--green);}
+.prog-step.active .prog-dot{background:var(--green);border-color:var(--green);color:var(--navy);transform:scale(1.15);box-shadow:0 0 0 6px rgba(0,232,122,0.15);}
+.prog-step.active .prog-label{color:#fff;font-weight:700;}
+.prog-step.done .prog-dot{background:rgba(0,232,122,0.15);border-color:rgba(0,232,122,0.35);color:var(--green);}
+.prog-step.done .prog-label{color:var(--text2);}
+.step-panels{position:relative;min-height:280px;}
+.step-panel{display:none;background:var(--navy2);border:1px solid var(--border);border-radius:24px;padding:40px;animation:panelIn .4s ease;}
+.step-panel.active{display:flex;gap:36px;align-items:flex-start;}
+@keyframes panelIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.panel-icon-wrap{flex-shrink:0;}
+.panel-icon{width:72px;height:72px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:32px;border-width:1px;border-style:solid;}
+.panel-step-num{text-align:center;font-size:11px;font-weight:700;margin-top:8px;letter-spacing:1px;text-transform:uppercase;}
+.panel-kw-chip{display:inline-block;font-size:10px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-bottom:10px;}
+.panel-body h3{font-size:24px;font-weight:700;color:#fff;margin-bottom:12px;letter-spacing:-0.3px;line-height:1.2;}
+.panel-body p{font-size:15px;color:var(--text2);line-height:1.7;margin-bottom:20px;}
+.step-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;}
+.tag{background:var(--navy3);border:1px solid var(--border);color:var(--text2);font-size:12px;padding:6px 12px;border-radius:8px;font-weight:500;}
+.panel-nav{display:flex;align-items:center;gap:12px;}
+.btn-prev{padding:10px 24px;border-radius:10px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:var(--font-sans);font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;}
+.btn-prev:hover{border-color:rgba(255,255,255,0.2);color:#fff;}
+.btn-next{padding:10px 28px;border-radius:10px;border:none;background:var(--green);color:var(--navy);font-family:var(--font-sans);font-size:14px;font-weight:700;cursor:pointer;transition:all .2s;}
+.btn-next:hover{background:var(--green2);transform:translateY(-1px);}
+.btn-next:disabled{background:rgba(0,232,122,0.2);color:var(--text3);cursor:default;transform:none;}
+.step-counter{font-size:13px;color:var(--text3);margin-left:auto;}
+.auto-bar{height:3px;background:var(--border);border-radius:100px;margin-top:20px;overflow:hidden;}
+.auto-fill{height:100%;background:var(--green);border-radius:100px;width:0%;transition:width linear;}
+.pillars-section{max-width:1200px;margin:0 auto;text-align:center;}
+.pillars-section h2{font-size:clamp(32px,4vw,48px);font-weight:800;color:#fff;line-height:1.1;letter-spacing:-1.5px;margin-bottom:12px;}
+.pillars-section h2 em{font-style:normal;color:var(--green);}
+.pillars-sub{font-size:17px;color:var(--text2);max-width:540px;margin:0 auto 52px;}
+.pillars-sub strong{color:#fff;}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:left;}
+.pillar-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:40px 32px;transition:all .3s ease;position:relative;overflow:hidden;opacity:0;transform:translateY(30px);}
+.pillar-card.visible{opacity:1;transform:translateY(0);}
+.pillar-card:nth-child(1){transition:all .6s ease .0s;}.pillar-card:nth-child(2){transition:all .6s ease .12s;}.pillar-card:nth-child(3){transition:all .6s ease .24s;}
+.pillar-card:hover{border-color:rgba(0,232,122,0.3);transform:translateY(-4px) !important;box-shadow:0 20px 60px rgba(0,0,0,0.3);background:linear-gradient(135deg,rgba(0,232,122,0.03),rgba(26,140,255,0.03));}
+.pillar-card::before{content:\'\';position:absolute;top:-60px;right:-60px;width:180px;height:180px;border-radius:50%;background:var(--green);opacity:0;transition:opacity .3s;pointer-events:none;}
+.pillar-card:hover::before{opacity:0.04;}
+.pillar-card:nth-child(2)::before{background:var(--blue);}
+.pillar-card:nth-child(3)::before{background:var(--gold);}
+.pillar-icon{font-size:40px;margin-bottom:16px;}
+.pillar-tag{display:inline-block;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-bottom:12px;}
+.pillar-card:nth-child(1) .pillar-tag{background:rgba(0,232,122,0.1);color:var(--green);}
+.pillar-card:nth-child(2) .pillar-tag{background:rgba(26,140,255,0.1);color:var(--blue);}
+.pillar-card:nth-child(3) .pillar-tag{background:rgba(255,203,71,0.1);color:var(--gold);}
+.pillar-card h3{font-size:20px;font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:-0.3px;}
+.pillar-card p{font-size:14px;color:var(--text2);line-height:1.6;}
+.pillar-list{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:7px;}
+.pillar-list li{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text2);}
+.pillar-list li::before{content:"✓";font-weight:800;font-size:12px;flex-shrink:0;margin-top:1px;}
+.pillar-card:nth-child(1) .pillar-list li::before{color:var(--green);}
+.pillar-card:nth-child(2) .pillar-list li::before{color:var(--blue);}
+.pillar-card:nth-child(3) .pillar-list li::before{color:var(--gold);}
+.newsletter-section{margin:100px auto 0;display:flex;justify-content:center;}
+.newsletter-card{background:linear-gradient(135deg,rgba(0,232,122,0.08),rgba(26,140,255,0.06));border:1px solid rgba(0,232,122,0.15);border-radius:24px;padding:48px 32px;text-align:center;max-width:700px;width:100%;box-shadow:0 20px 40px rgba(0,0,0,0.2);transition:transform 0.3s ease,border-color 0.3s ease;}
+.newsletter-card:hover{border-color:rgba(0,232,122,0.3);transform:translateY(-2px);}
+.nl-icon-wrapper{width:64px;height:64px;border-radius:16px;background:rgba(0,232,122,0.1);border:1px solid rgba(0,232,122,0.2);display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 20px auto;}
+.newsletter-card h3{font-size:clamp(24px,4vw,32px);font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-0.5px;}
+.newsletter-card p{font-size:16px;color:var(--text2);line-height:1.6;margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto;}
+.btn-subscribe{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:var(--navy);text-decoration:none;font-size:16px;font-weight:700;padding:16px 36px;border-radius:100px;transition:all 0.25s ease;}
+.btn-subscribe:hover{background:var(--green2);transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,232,122,0.3);}
+.privacy-note{font-size:12px;color:var(--text3);margin-top:20px;font-weight:500;}
+@media(max-width:900px){.progress-bar-wrap{gap:0;overflow-x:auto;padding-bottom:4px;}.prog-label{display:none;}.step-panel.active{flex-direction:column;}.grid-3{grid-template-columns:1fr;}.panel-nav{flex-wrap:wrap;}.step-counter{margin-left:0;width:100%;text-align:center;}}
+</style>
+<div class="how-header">
+  <div class="section-badge">How It Works</div>
+  <h2>Up and running in<br><em>under 3 minutes.</em></h2>
+  <p class="how-subtitle">No bank login credentials required. No API keys. No manual setup. Sri Lanka\'s <strong>automated bank SMS expense tracker</strong> starts working the moment you connect sending <strong>pre-purchase spending alerts</strong> and saving you money from day one.</p>
+</div>
+<div class="keyword-line">
+  <span class="kw-pill">3-min setup</span>
+  <span class="kw-pill">No bank login</span>
+  <span class="kw-pill">Bank SMS tracking</span>
+  <span class="kw-pill">Pre-purchase alerts</span>
+  <span class="kw-pill">AI savings plan</span>
+  <span class="kw-pill">Sri Lanka</span>
+</div>
+<div class="stepper-wrap">
+  <div class="progress-bar-wrap" id="progressBar">
+    <div class="prog-step active" data-idx="0" onclick="goStep(0)"><div class="prog-dot">1</div><div class="prog-label">Download &amp; Connect</div></div>
+    <div class="prog-line" id="pline-0"></div>
+    <div class="prog-step" data-idx="1" onclick="goStep(1)"><div class="prog-dot">2</div><div class="prog-label">Auto Tracking</div></div>
+    <div class="prog-line" id="pline-1"></div>
+    <div class="prog-step" data-idx="2" onclick="goStep(2)"><div class="prog-dot">3</div><div class="prog-label">Spending Alerts</div></div>
+    <div class="prog-line" id="pline-2"></div>
+    <div class="prog-step" data-idx="3" onclick="goStep(3)"><div class="prog-dot">4</div><div class="prog-label">AI Dashboard</div></div>
+    <div class="prog-line" id="pline-3"></div>
+    <div class="prog-step" data-idx="4" onclick="goStep(4)"><div class="prog-dot">5</div><div class="prog-label">Earn Rewards</div></div>
+  </div>
+  <div class="step-panels">
+    <div class="step-panel active" id="panel-0">
+      <div class="panel-icon-wrap"><div class="panel-icon" style="background:rgba(0,232,122,0.1);border-color:rgba(0,232,122,0.2);">📱</div><div class="panel-step-num" style="color:var(--green);">Step 1 of 5</div></div>
+      <div class="panel-body">
+        <div class="panel-kw-chip" style="background:rgba(0,232,122,0.1);color:var(--green);">Budgeting app setup Sri Lanka</div>
+        <h3>Download &amp; connect your bank SMS in 3 minutes</h3>
+        <p>Install SpendWise from Google Play or the App Store. Enter your mobile number the same one registered with your bank. SpendWise requests permission to read your <strong style="color:#fff;">bank SMS alerts</strong> only. No passwords. No bank credentials. No third-party logins. Your banking data never leaves your phone without your explicit consent. All major <strong style="color:#fff;">Sri Lankan banks supported instantly</strong>: Sampath, Commercial, BOC, HNB, People\'s Bank, NSB, Seylan, and more.</p>
+        <div class="step-tags"><span class="tag">📱 Android &amp; iOS</span><span class="tag">⏱️ 3-min setup</span><span class="tag">🔐 No bank credentials</span><span class="tag">🏦 All SL banks</span></div>
+        <div class="panel-nav"><button class="btn-prev" disabled>← Back</button><button class="btn-next" onclick="goStep(1)">Next: Auto Tracking →</button><span class="step-counter">1 / 5</span></div>
+      </div>
+    </div>
+    <div class="step-panel" id="panel-1">
+      <div class="panel-icon-wrap"><div class="panel-icon" style="background:rgba(26,140,255,0.1);border-color:rgba(26,140,255,0.2);">⚡</div><div class="panel-step-num" style="color:var(--blue);">Step 2 of 5</div></div>
+      <div class="panel-body">
+        <div class="panel-kw-chip" style="background:rgba(26,140,255,0.1);color:var(--blue);">Automatic bank SMS expense tracking</div>
+        <h3>Bank SMS auto-tracked &amp; categorised in 3 seconds</h3>
+        <p>The moment a bank SMS arrives for example, "Debit of LKR 2,840.00 at KEELLS SUPER COL" SpendWise\'s <strong style="color:#fff;">NLP engine automatically extracts</strong> the merchant, amount, location, and category. Your transaction appears on the <strong style="color:#fff;">automated expense tracker dashboard</strong> within 3 seconds. No manual action required. Email receipts from e-commerce are handled the same way. This is what makes SpendWise Sri Lanka\'s most complete <strong style="color:#fff;">zero-input financial tracking app</strong>.</p>
+        <div class="step-tags"><span class="tag">🤖 NLP engine</span><span class="tag">⚡ Under 3 seconds</span><span class="tag">📧 Email receipts</span><span class="tag">🏷️ Auto-categorised</span></div>
+        <div class="panel-nav"><button class="btn-prev" onclick="goStep(0)">← Back</button><button class="btn-next" onclick="goStep(2)">Next: Spending Alerts →</button><span class="step-counter">2 / 5</span></div>
+      </div>
+    </div>
+    <div class="step-panel" id="panel-2">
+      <div class="panel-icon-wrap"><div class="panel-icon" style="background:rgba(255,203,71,0.1);border-color:rgba(255,203,71,0.2);">🔔</div><div class="panel-step-num" style="color:var(--gold);">Step 3 of 5</div></div>
+      <div class="panel-body">
+        <div class="panel-kw-chip" style="background:rgba(255,203,71,0.1);color:var(--gold);">Pre-purchase spending alerts Sri Lanka</div>
+        <h3>Real-time pre-purchase spending alerts before you spend</h3>
+        <p>When you are near a spending location, SpendWise\'s location engine activates. It checks your spending history, compares prices with nearby alternatives, and sends a <strong style="color:#fff;">spending alert before the transaction happens</strong>: "You\'re near Keells. Cargills 400m away offers 25% off this week save LKR 800." No other <strong style="color:#fff;">budgeting app in Sri Lanka</strong> intervenes before your money leaves your account. Only SpendWise.</p>
+        <div class="step-tags"><span class="tag">📍 Location-triggered</span><span class="tag">💰 Before you spend</span><span class="tag">🏪 Real-time price data</span><span class="tag">🇱🇰 Sri Lanka first</span></div>
+        <div class="panel-nav"><button class="btn-prev" onclick="goStep(1)">← Back</button><button class="btn-next" onclick="goStep(3)">Next: AI Dashboard →</button><span class="step-counter">3 / 5</span></div>
+      </div>
+    </div>
+    <div class="step-panel" id="panel-3">
+      <div class="panel-icon-wrap"><div class="panel-icon" style="background:rgba(168,85,247,0.1);border-color:rgba(168,85,247,0.2);">🧠</div><div class="panel-step-num" style="color:var(--purple);">Step 4 of 5</div></div>
+      <div class="panel-body">
+        <div class="panel-kw-chip" style="background:rgba(168,85,247,0.1);color:var(--purple);">AI financial dashboard Sri Lanka</div>
+        <h3>AI learns your patterns &amp; builds a personalised savings plan</h3>
+        <p>After 2–3 weeks, SpendWise\'s <strong style="color:#fff;">AI financial dashboard</strong> has enough data to build a model unique to you. Generic charts disappear and instead you see your biggest waste categories, your most effective <strong style="color:#fff;">saving opportunities in Sri Lanka</strong>, and a monthly spending forecast personalised to your exact behaviour. The longer you use SpendWise, the smarter your <strong style="color:#fff;">automated budgeting app</strong> becomes.</p>
+        <div class="step-tags"><span class="tag">🧠 AI model</span><span class="tag">📊 Personalised insights</span><span class="tag">📈 Trend forecasting</span><span class="tag">🎯 5 spending personas</span></div>
+        <div class="panel-nav"><button class="btn-prev" onclick="goStep(2)">← Back</button><button class="btn-next" onclick="goStep(4)">Next: Earn Rewards →</button><span class="step-counter">4 / 5</span></div>
+      </div>
+    </div>
+    <div class="step-panel" id="panel-4">
+      <div class="panel-icon-wrap"><div class="panel-icon" style="background:rgba(255,77,109,0.1);border-color:rgba(255,77,109,0.2);">🎁</div><div class="panel-step-num" style="color:var(--pink);">Step 5 of 5</div></div>
+      <div class="panel-body">
+        <div class="panel-kw-chip" style="background:rgba(255,77,109,0.1);color:var(--pink);">Save money Sri Lanka referral</div>
+        <h3>Share your savings milestone earn free premium months</h3>
+        <p>When you\'ve <strong style="color:#fff;">saved more than LKR 5,000 in a month</strong>, SpendWise prompts you to share your milestone on Instagram or WhatsApp. Your personal referral code gives new users their first 3 months free and earns you a free premium month for every user who converts. The more people you help <strong style="color:#fff;">save money in Sri Lanka</strong>, the more free months you earn. SpendWise\'s best users pay nothing.</p>
+        <div class="step-tags"><span class="tag">🎁 Referral rewards</span><span class="tag">📣 Social sharing</span><span class="tag">♾️ Free months</span><span class="tag">💰 LKR 5K+ milestone</span></div>
+        <div class="panel-nav"><button class="btn-prev" onclick="goStep(3)">← Back</button><button class="btn-next" onclick="goStep(0)" style="background:var(--navy2);border:1px solid var(--border);color:var(--text);">↺ Start Over</button><span class="step-counter" style="color:var(--green);font-weight:700;">✓ Complete!</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="auto-bar"><div class="auto-fill" id="autoFill"></div></div>
+</div>
+<div class="pillars-section" id="pillarsSection">
+  <div class="section-badge">The SpendWise Model</div>
+  <h2>Three pillars.<br><em>One system.</em></h2>
+  <p class="pillars-sub">Every feature in SpendWise maps to one of three financial principles the same three pillars that make it Sri Lanka\'s most complete <strong>automated budgeting app</strong>.</p>
+  <div class="grid-3" id="pillarsGrid">
+    <div class="pillar-card"><div class="pillar-icon">🎯</div><div class="pillar-tag">Pillar 1</div><h3>Financial planning &amp; budget tracking</h3><p>Long-term budget goals, monthly savings targets, and personalised spending forecasts. SpendWise builds a <strong style="color:#fff;">financial roadmap</strong> based on your actual bank SMS data not what a generic budgeting app thinks you should spend.</p><ul class="pillar-list"><li>Monthly savings target setting</li><li>Category budget limits with alerts</li><li>Personalised spending forecasts</li><li>LKR-based financial roadmap</li></ul></div>
+    <div class="pillar-card"><div class="pillar-icon">💡</div><div class="pillar-tag">Pillar 2</div><h3>Real-time saving strategies Sri Lanka</h3><p>Pre-purchase spending alerts, subscription cancellation suggestions, and live price comparison data across Sri Lankan supermarkets. Short-term actions that add up to <strong style="color:#fff;">thousands of LKR saved every month</strong> without changing your lifestyle.</p><ul class="pillar-list"><li>Real-time pre-purchase spending alerts</li><li>Keells vs Cargills price comparison</li><li>Subscription waste detection</li><li>Discount alert notifications</li></ul></div>
+    <div class="pillar-card"><div class="pillar-icon">📈</div><div class="pillar-tag">Pillar 3</div><h3>Behaviour tracking &amp; AI spending insights</h3><p>Deep analysis of spending patterns across 5 user personas Location-Based Saver, Budget Planner, Category Manager, Grocery Optimizer, Discount Hunter. Understanding not just what you spent, but <strong style="color:#fff;">why you spent it</strong> and how to change it.</p><ul class="pillar-list"><li>5 AI-identified spending personas</li><li>Weekly behaviour analysis</li><li>Trend change detection</li><li>Personalised habit suggestions</li></ul></div>
+  </div>
+</div>
+<div class="newsletter-section">
+  <div class="newsletter-card">
+    <div class="nl-icon-wrapper">📬</div>
+    <h3>Join the SpendWise Newsletter</h3>
+    <p>Get exclusive early access, weekly tips on how to save money in Sri Lanka, and product updates delivered straight to your inbox.</p>
+    <a href="https://forms.gle/fezuc9NaaDpJwTNH6" target="_blank" class="btn-subscribe">Subscribe for Free <span>→</span></a>
+    <div class="privacy-note">✓ Protected by Sri Lanka\'s PDPA 2022. No spam, unsubscribe anytime.</div>
+  </div>
+</div>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-nav">
+      <div class="copyright">© 2026 SpendWise Ltd. Sri Lanka.</div>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/ravidu-senajith/" target="_blank" rel="noopener" title="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/spendwiselk/" target="_blank" rel="noopener" title="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 1.76-6.98 6.208-.058 1.281-.072 1.688-.072 4.948s.014 3.667.072 4.947c.2 4.441 2.618 5.998 6.98 6.195 1.28.058 1.689.072 4.947.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-1.762 6.979-6.195.059-1.28.073-1.689.073-4.947 0-3.259-.014-3.667-.072-4.947-.196-4.439-2.618-5.999-6.979-6.208-1.28-.058-1.689-.072-4.948-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://github.com/Whi7erose" target="_blank" rel="noopener" title="GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/navbar.js"></script>
+  <script>
+let current=0;let autoTimer=null;const TOTAL=5;const AUTO_DURATION=8000;
+function goStep(idx){document.getElementById('panel-'+current).classList.remove('active');document.querySelectorAll('.prog-step').forEach((el,i)=>{el.classList.remove('active','done');if(i<idx) el.classList.add('done');else if(i===idx) el.classList.add('active');});for(let i=0;i<4;i++){const l=document.getElementById('pline-'+i);if(l){l.classList.remove('done');if(i<idx) l.classList.add('done');}}current=idx;document.getElementById('panel-'+current).classList.add('active');resetAutoProgress();}
+function resetAutoProgress(){clearTimeout(autoTimer);const fill=document.getElementById('autoFill');fill.style.transition='none';fill.style.width='0%';void fill.offsetWidth;fill.style.transition='width '+AUTO_DURATION+'ms linear';fill.style.width='100%';autoTimer=setTimeout(()=>{if(current<TOTAL-1) goStep(current+1);else goStep(0);},AUTO_DURATION);}
+const pillars=document.querySelectorAll('.pillar-card');const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add('visible');});},{threshold:0.15});
+pillars.forEach(p=>obs.observe(p));
+resetAutoProgress();
+  </script>
+</body>
+</html>
