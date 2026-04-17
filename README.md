@@ -1,10 +1,10 @@
 # 💸 SpendWise
 
-> A prototype concept webpage for a personal budgeting app idea — built just for fun as a pet project.
+> A prototype concept webpage for a personal budgeting app idea  built just for fun as a pet project.
 
 ## What is this?
 
-SpendWise is a concept I had for a budgeting app aimed at Sri Lankan users. This is just a static front-end mockup to visualize the idea — no backend, no real functionality, just vibes.
+SpendWise is a concept I had for a budgeting app aimed at Sri Lankan users. This is just a static front-end mockup to visualize the idea  no backend, no real functionality, just vibes.
 
 ## Pages
 
